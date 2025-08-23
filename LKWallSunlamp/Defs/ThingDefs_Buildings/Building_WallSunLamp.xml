@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+<ThingDef ParentName="LampBase">
+    <defName>LKSunWallLampStandAlone</defName>
+    <label>uber-wall sun lamp</label>
+    <description>A wall-mounted sun lamp that lights an area brightly enough to grow crops,has double radius of regular sun lamp,only uses fraction of normal sun lamp's power.</description>
+	<thingClass>Building_SunLamp</thingClass>
+    <rotatable>true</rotatable>
+    <graphicData>
+      <texPath>Things/Building/Furniture/WallLamp/WallLamp</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawOffsetNorth>(0,0,0.9)</drawOffsetNorth>
+      <drawOffsetSouth>(0,0,-0.9)</drawOffsetSouth>
+      <drawOffsetWest>(-0.9,0,0)</drawOffsetWest>
+      <drawOffsetEast>(0.9,0,0)</drawOffsetEast>
+      <damageData>
+        <enabled>false</enabled>
+      </damageData>
+	  <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+    </graphicData>
+	<blockWind>true</blockWind>
+    <tickerType>Rare</tickerType>
+    <uiIconPath>Things/Building/Furniture/WallLamp/WallLamp_MenuIcon</uiIconPath>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <costList>
+      <Steel>40</Steel>
+    </costList>
+    <costStuffCount>40</costStuffCount>
+    <statBases>
+      <WorkToBuild>330</WorkToBuild>
+      <MaxHitPoints>350</MaxHitPoints>
+      <Mass>2</Mass>
+    </statBases>
+    <stuffCategories>
+      <li>Woody</li>
+      <li>Metallic</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <uiOrder>2995</uiOrder>
+	<comps>
+      <li Class="CompProperties_Glower">
+        <overlightRadius>24.0</overlightRadius>
+        <glowRadius>24</glowRadius>
+        <glowColor>(370,370,370,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>true</shortCircuitInRain>
+        <basePowerConsumption>20</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Schedule">
+        <!-- Match plant growing times -->
+        <startTime>0.25</startTime>
+        <endTime>0.8</endTime>
+        <offMessage>Off for plant resting period</offMessage>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>3</heatPerSecond>
+      </li>
+    </comps>
+    <!-- Determined by trial and error
+    This value isn't perfect because these radii use different algorithms
+    but it matches in this case-->
+    <specialDisplayRadius>5.8</specialDisplayRadius>
+    <passability>Standable</passability>
+    <terrainAffordanceNeeded IsNull="True" />
+    <pathCost>0</pathCost>
+    <overrideMinifiedRot>North</overrideMinifiedRot>
+    <minifiedDrawOffset>(0, 0, 0.2)</minifiedDrawOffset>
+    <building>
+      <isEdifice>false</isEdifice>
+      <isAttachment>true</isAttachment>
+      <paintable>true</paintable>
+    </building>
+    <placeWorkers>
+      <li>Placeworker_AttachedToWall</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>LKUberSunlamp</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+  </ThingDef>
+</Defs>
