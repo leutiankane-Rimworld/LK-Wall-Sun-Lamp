@@ -100,7 +100,9 @@
 
     
     <designationCategory>Temperature</designationCategory>
-    
+    <researchPrerequisites>
+      <li>Electricity</li>
+    </researchPrerequisites>
     
     <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
   </ThingDef>
@@ -199,9 +201,12 @@
     </comps>
 
     <designationCategory>Temperature</designationCategory>
-    
+    <researchPrerequisites>
+      <li>Electricity</li>
+    </researchPrerequisites>
 
     <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
   </ThingDef>
+
 
 </Defs>
