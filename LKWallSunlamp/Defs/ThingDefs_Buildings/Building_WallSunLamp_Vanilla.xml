@@ -59,7 +59,7 @@
     <!-- Determined by trial and error
     This value isn't perfect because these radii use different algorithms
     but it matches in this case-->
-    <specialDisplayRadius>5.8</specialDisplayRadius>
+    <specialDisplayRadius>10</specialDisplayRadius>
     <passability>Standable</passability>
     <terrainAffordanceNeeded IsNull="True" />
     <pathCost>0</pathCost>
@@ -74,4 +74,5 @@
       <li>Placeworker_AttachedToWall</li>
     </placeWorkers>
   </ThingDef>
+
 </Defs>
