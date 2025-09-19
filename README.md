@@ -3,7 +3,7 @@ Adds a Cheap Wall Mounted Sun Lamp that has a 24 radius and consumes 1450 power 
 
 Adds Uber wall sun lamp locked behind LK sunlamp research found in LK sun lamp research tab 
 
-Both sunlamps have a much larger radius (double) that a vanilla sunlamp does.
+Both sunlamps have a much larger grow zone gizmo radius (double) that a vanilla sunlamp does.
 
 Adds Uber Wall Heater and Cooler. 
 
