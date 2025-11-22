@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+<!--Uber Hydroponics-->
+<ThingDef ParentName="BuildingBase">
+  <defName>LKHydroponicsBasinA</defName>
+  <label>Uber hydroponics basin</label>
+  <description>Grows plants more quickly in an artificial nutrient bath. Plants will die if power is cut. Basins are built into the floor. Provides it's own light. Fertility is 410%. Can Produce Oxygen in space.</description>
+  <thingClass>Building_PlantGrower</thingClass>
+  <graphicData>
+    <texPath>Things/Building/Production/HydroponicsBasin</texPath>
+    <graphicClass>Graphic_Multi</graphicClass>
+    <drawSize>(1,4)</drawSize>
+    <damageData>
+      <cornerTL>Damage/Corner</cornerTL>
+      <cornerTR>Damage/Corner</cornerTR>
+      <cornerBL>Damage/Corner</cornerBL>
+      <cornerBR>Damage/Corner</cornerBR>
+    </damageData>
+  </graphicData>
+  <altitudeLayer>LowPlant</altitudeLayer>
+  <passability>Standable</passability>
+  <pathCost>0</pathCost>
+  <castEdgeShadows>true</castEdgeShadows>
+  <constructEffect>ConstructMetal</constructEffect>
+  <fillPercent>0</fillPercent>
+  <statBases>
+    <WorkToBuild>2800</WorkToBuild>
+    <MaxHitPoints>180</MaxHitPoints>
+    <Flammability>0.0</Flammability>
+    <Cleanliness>4</Cleanliness>
+  </statBases>
+  <size>(1,4)</size>
+  <costList>
+    <Steel>200</Steel>
+    <ComponentSpacer>4</CComponentSpacer>
+  </costList>
+  <fertility>4.1</fertility>
+  <building>
+    <defaultPlantToGrow>Plant_Rice</defaultPlantToGrow>
+    <sowTag>Hydroponic</sowTag>
+  </building>
+  <tickerType>Rare</tickerType>
+  <comps>
+    <li Class="CompProperties_Forbiddable"/>
+    <li Class="CompProperties_Power">
+      <compClass>CompPowerTrader</compClass>
+      <basePowerConsumption>200</basePowerConsumption>
+    </li>
+    <li Class="CompProperties_Flickable"/>
+    <li Class="CompProperties_Breakdownable"/>
+    <li Class="CompProperties_Glower">
+      <overlightRadius>3.5</overlightRadius>
+      <glowRadius>3.0</glowRadius>
+      <glowColor>(370,370,370,0)</glowColor>
+    </li>
+    <li Class="CompProperties_OxygenPusher" MayRequire="Ludeon.RimWorld.Odyssey">
+        <requiresPower>true</requiresPower>
+        <airPerSecondPerHundredCells>0.01</airPerSecondPerHundredCells>
+    </li> 
+  </comps>
+  <researchPrerequisites><li>LKUberSunlamp</li></researchPrerequisites>
+  <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+  <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+  <designationCategory>Production</designationCategory>
+</ThingDef>
+</Defs>
