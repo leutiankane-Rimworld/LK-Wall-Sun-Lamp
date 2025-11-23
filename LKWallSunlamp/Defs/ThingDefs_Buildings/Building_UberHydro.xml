@@ -32,7 +32,7 @@
   <size>(1,4)</size>
   <costList>
     <Steel>200</Steel>
-    <ComponentSpacer>4</CComponentSpacer>
+    <ComponentSpacer>4</ComponentSpacer>
   </costList>
   <fertility>4.1</fertility>
   <building>
@@ -63,4 +63,5 @@
   <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
   <designationCategory>Production</designationCategory>
 </ThingDef>
+
 </Defs>
