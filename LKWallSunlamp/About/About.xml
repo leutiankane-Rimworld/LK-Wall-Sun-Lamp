@@ -26,4 +26,7 @@
     <li>Ludeon.RimWorld.Odyssey</li>
         <li>brrainz.harmony</li>
     </loadAfter>
+	<incompatibleWith>
+  <li>LeutianKane.Resources</li>
+</incompatibleWith>
 </ModMetaData>
